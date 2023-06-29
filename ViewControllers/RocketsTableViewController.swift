@@ -19,7 +19,7 @@ class RocketsTableViewController: UITableViewController {
     
     title = "Rockets"
     
-    rocketViewModel.rockets.receive(on: RunLoop.main)
+    rocketViewModel.rocketCells.receive(on: RunLoop.main)
         .sink { complete in
       print(complete)
     } receiveValue: { [weak self] rockets in
@@ -32,12 +32,12 @@ class RocketsTableViewController: UITableViewController {
   }
 
   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return rocketViewModel.rockets.value.count
+    return rocketViewModel.rocketCells.value.count
   }
 
   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-    let rocket = RocketCellViewModel(rocket: rocketViewModel.rockets.value[indexPath.row])
+    let rocket = rocketViewModel.rocketCells.value[indexPath.row]
     cell.textLabel?.text = rocket.rocketName
     cell.detailTextLabel?.text = rocket.rocketFirstStartFormatted
     cell.imageView?.image = rocket.rocketIcon

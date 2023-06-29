@@ -10,10 +10,11 @@ import Combine
 
 class RocketViewModel {
   
-  let rockets = CurrentValueSubject<[Rocket], Never>([Rocket]())
+  private let rockets = CurrentValueSubject<[Rocket], Never>([Rocket]())
   let errorMessage = CurrentValueSubject<String?, Never>(nil)
   let spaceXAPI = SpaceXAPI()
   var cancellables = Set<AnyCancellable>()
+  let rocketCells = CurrentValueSubject<[RocketCellViewModel], Never>([RocketCellViewModel]())
   
   init() {
   }
@@ -28,7 +29,10 @@ class RocketViewModel {
     }
     .store(in: &cancellables)
     
+    rockets
+      .map{ $0.map { RocketCellViewModel(rocket: $0)} }
+      .subscribe(rocketCells)
+      .store(in: &cancellables)
   }
-  
-  
+    
 }
