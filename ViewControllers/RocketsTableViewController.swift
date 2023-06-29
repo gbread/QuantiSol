@@ -6,12 +6,24 @@
 //
 
 import UIKit
+import Combine
+
 
 class RocketsTableViewController: UITableViewController {
 
+  var cancellables = Set<AnyCancellable>()
+  
   override func viewDidLoad() {
     super.viewDidLoad()
-    // Do any additional setup after loading the view.
+    
+    
+    SpaceXAPI().getAllRockets().sink { complete in
+      print(complete)
+    } receiveValue: { rockets in
+      print(rockets)
+    }
+    .store(in: &cancellables)
+
   }
 
   
