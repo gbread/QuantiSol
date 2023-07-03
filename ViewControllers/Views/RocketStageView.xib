@@ -24,28 +24,28 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Em9-2y-g71">
-                    <rect key="frame" x="0.0" y="0.0" width="311" height="304"/>
+                    <rect key="frame" x="20" y="20" width="271" height="264"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IQV-vb-tpW">
-                            <rect key="frame" x="0.0" y="0.0" width="311" height="54.333333333333336"/>
+                            <rect key="frame" x="0.0" y="0.0" width="271" height="46.333333333333336"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zwL-lK-iLQ" customClass="RocketStageRowView" customModule="Quanti_test" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="62.333333333333329" width="311" height="54.333333333333329"/>
+                            <rect key="frame" x="0.0" y="54.333333333333329" width="271" height="46.333333333333329"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hyq-LG-NJn" customClass="RocketStageRowView" customModule="Quanti_test" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="124.66666666666667" width="311" height="54.666666666666671"/>
+                            <rect key="frame" x="0.0" y="108.66666666666667" width="271" height="46.666666666666671"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4fK-UV-Iq2" customClass="RocketStageRowView" customModule="Quanti_test" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="187.33333333333334" width="311" height="54.333333333333343"/>
+                            <rect key="frame" x="0.0" y="163.33333333333334" width="271" height="46.333333333333343"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7P8-mQ-LeZ" customClass="RocketStageRowView" customModule="Quanti_test" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="249.66666666666666" width="311" height="54.333333333333343"/>
+                            <rect key="frame" x="0.0" y="217.66666666666666" width="271" height="46.333333333333343"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         </view>
                     </subviews>
@@ -54,10 +54,10 @@
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstAttribute="top" secondItem="Em9-2y-g71" secondAttribute="top" id="b0g-rP-f2N"/>
-                <constraint firstItem="Em9-2y-g71" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="piN-GL-bIM"/>
-                <constraint firstAttribute="bottom" secondItem="Em9-2y-g71" secondAttribute="bottom" id="ujh-Mz-CiS"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Em9-2y-g71" secondAttribute="trailing" id="xib-Lh-k4a"/>
+                <constraint firstAttribute="top" secondItem="Em9-2y-g71" secondAttribute="top" constant="-20" id="b0g-rP-f2N"/>
+                <constraint firstItem="Em9-2y-g71" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="piN-GL-bIM"/>
+                <constraint firstAttribute="bottom" secondItem="Em9-2y-g71" secondAttribute="bottom" constant="20" id="ujh-Mz-CiS"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Em9-2y-g71" secondAttribute="trailing" constant="20" id="xib-Lh-k4a"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="-41.984732824427482" y="-172.53521126760563"/>
