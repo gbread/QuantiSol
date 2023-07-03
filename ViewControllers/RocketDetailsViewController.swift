@@ -24,6 +24,7 @@ class RocketDetailsViewController : UIViewController{
   override func viewDidLoad() {
     super.viewDidLoad()
     
+    navigationItem.largeTitleDisplayMode = .never
     title = rocketDetailsViewModel.title
     descriptionLabel.text = rocketDetailsViewModel.overview
     
