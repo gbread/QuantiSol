@@ -139,7 +139,7 @@
                                     <constraint firstItem="Oeg-6s-x7N" firstAttribute="leading" secondItem="bWt-5q-Q84" secondAttribute="leading" constant="16" id="Hz8-uM-n3s"/>
                                     <constraint firstItem="Oeg-6s-x7N" firstAttribute="top" secondItem="bWt-5q-Q84" secondAttribute="top" constant="16" id="LLF-0o-ikq"/>
                                     <constraint firstItem="Oeg-6s-x7N" firstAttribute="trailing" secondItem="bWt-5q-Q84" secondAttribute="trailing" constant="16" id="VCu-b4-kqY"/>
-                                    <constraint firstItem="Oeg-6s-x7N" firstAttribute="bottom" secondItem="bWt-5q-Q84" secondAttribute="bottom" constant="16" id="t2y-3A-3wa"/>
+                                    <constraint firstItem="Oeg-6s-x7N" firstAttribute="bottom" secondItem="bWt-5q-Q84" secondAttribute="bottom" constant="-16" id="t2y-3A-3wa"/>
                                 </constraints>
                                 <viewLayoutGuide key="contentLayoutGuide" id="bWt-5q-Q84"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="Yes-OD-uTB"/>
