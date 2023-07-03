@@ -66,6 +66,7 @@ struct FirstStage: Codable {
 }
 
 struct SecondStage: Codable {
+  var reusable: Bool //"reusable": false,
   var engines: Int //"engines": 1,
   var fuel_amount_tons: Double //"fuel_amount_tons": 44.3,
   var burn_time_sec: Int? //"burn_time_sec": 169,

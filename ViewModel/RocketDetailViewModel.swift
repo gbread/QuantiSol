@@ -46,7 +46,7 @@ struct RocketDetailViewModel {
     
     secondStage = RocketStageViewModel(
       title: "Second Stage",
-      reusable: false,
+      reusable: rocket.second_stage.reusable,
       engines: rocket.second_stage.engines,
       fuelTonsOfFuel: rocket.second_stage.fuel_amount_tons,
       burnTimeSecs: rocket.second_stage.burn_time_sec
