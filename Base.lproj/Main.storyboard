@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -40,6 +41,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="PfO-Pb-k18" kind="show" id="7V1-7H-efS"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -70,6 +74,101 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkh-H1-j0E" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-641.98473282442751" y="11.971830985915494"/>
+        </scene>
+        <!--Rocket Details View Controller-->
+        <scene sceneID="Yko-eB-LTL">
+            <objects>
+                <viewController id="PfO-Pb-k18" customClass="RocketDetailsViewController" customModule="Quanti_test" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NyL-ZN-BMd">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cbN-y5-rE6">
+                                <rect key="frame" x="0.0" y="-8" width="393" height="826"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Oeg-6s-x7N">
+                                        <rect key="frame" x="16" y="16" width="361" height="512"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Overview" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jHU-mb-26O">
+                                                <rect key="frame" x="0.0" y="0.0" width="361" height="23"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="19"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c18-H1-FZ3">
+                                                <rect key="frame" x="0.0" y="39" width="361" height="20.333333333333329"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Parameters" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oQs-Mw-WnI">
+                                                <rect key="frame" x="0.0" y="75.333333333333329" width="361" height="23"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="19"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="w81-fx-aHc">
+                                                <rect key="frame" x="0.0" y="114.33333333333331" width="361" height="109.66666666666669"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NDV-ep-Obt" customClass="RocketParameterView" customModule="Quanti_test" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="109.66666666666667" height="109.66666666666667"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1rH-GW-B28" customClass="RocketParameterView" customModule="Quanti_test" customModuleProvider="target">
+                                                        <rect key="frame" x="125.66666666666666" y="0.0" width="109.66666666666666" height="109.66666666666667"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n6v-dW-Z2A" customClass="RocketParameterView" customModule="Quanti_test" customModuleProvider="target">
+                                                        <rect key="frame" x="251.33333333333329" y="0.0" width="109.66666666666666" height="109.66666666666667"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    </view>
+                                                </subviews>
+                                            </stackView>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mQx-Sb-xef" customClass="RocketStageView" customModule="Quanti_test" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="240" width="361" height="128"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g5F-xq-KKd" customClass="RocketStageView" customModule="Quanti_test" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="384" width="361" height="128"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Oeg-6s-x7N" firstAttribute="leading" secondItem="bWt-5q-Q84" secondAttribute="leading" constant="16" id="Hz8-uM-n3s"/>
+                                    <constraint firstItem="Oeg-6s-x7N" firstAttribute="top" secondItem="bWt-5q-Q84" secondAttribute="top" constant="16" id="LLF-0o-ikq"/>
+                                    <constraint firstItem="Oeg-6s-x7N" firstAttribute="trailing" secondItem="bWt-5q-Q84" secondAttribute="trailing" constant="16" id="VCu-b4-kqY"/>
+                                    <constraint firstItem="Oeg-6s-x7N" firstAttribute="bottom" secondItem="bWt-5q-Q84" secondAttribute="bottom" constant="16" id="t2y-3A-3wa"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="bWt-5q-Q84"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="Yes-OD-uTB"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="qH7-V4-jdE"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="qH7-V4-jdE" firstAttribute="trailing" secondItem="cbN-y5-rE6" secondAttribute="trailing" id="APQ-xV-m0h"/>
+                            <constraint firstItem="qH7-V4-jdE" firstAttribute="top" secondItem="cbN-y5-rE6" secondAttribute="topMargin" id="Ebb-Nd-OaX"/>
+                            <constraint firstItem="qH7-V4-jdE" firstAttribute="bottom" secondItem="cbN-y5-rE6" secondAttribute="bottom" id="Nfn-At-VfX"/>
+                            <constraint firstItem="cbN-y5-rE6" firstAttribute="leading" secondItem="qH7-V4-jdE" secondAttribute="leading" id="RFf-hX-5qf"/>
+                            <constraint firstItem="Oeg-6s-x7N" firstAttribute="trailing" secondItem="qH7-V4-jdE" secondAttribute="trailing" constant="-16" id="UeK-sp-NIs"/>
+                            <constraint firstItem="Oeg-6s-x7N" firstAttribute="leading" secondItem="qH7-V4-jdE" secondAttribute="leading" constant="16" id="aA5-c9-GFT"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="UfQ-Am-QWY"/>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="c18-H1-FZ3" id="Jrp-nf-kRI"/>
+                        <outlet property="diameterParameterView" destination="1rH-GW-B28" id="RCo-TP-aa8"/>
+                        <outlet property="firstStageView" destination="mQx-Sb-xef" id="c2A-6F-Yi6"/>
+                        <outlet property="heightParameterView" destination="NDV-ep-Obt" id="wRA-Hr-yKF"/>
+                        <outlet property="massParameterView" destination="n6v-dW-Z2A" id="39a-0E-Rxf"/>
+                        <outlet property="secondStageView" destination="g5F-xq-KKd" id="wXd-9i-8N9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DZF-YR-HKy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1162.5954198473282" y="11.971830985915494"/>
         </scene>
     </scenes>
     <resources>

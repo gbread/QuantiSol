@@ -10,7 +10,7 @@ import Combine
 
 class RocketViewModel {
   
-  private let rockets = CurrentValueSubject<[Rocket], Never>([Rocket]())
+  let rockets = CurrentValueSubject<[Rocket], Never>([Rocket]())
   let errorMessage = CurrentValueSubject<String?, Never>(nil)
   let spaceXAPI = SpaceXAPI()
   var cancellables = Set<AnyCancellable>()
@@ -20,7 +20,6 @@ class RocketViewModel {
   }
   
   func loadRockets() {
-    
     // TODO: could be done better probably
     spaceXAPI.getAllRockets().sink { completion in
       // TODO: handle error

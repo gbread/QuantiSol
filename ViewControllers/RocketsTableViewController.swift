@@ -44,5 +44,13 @@ class RocketsTableViewController: UITableViewController {
     return cell
   }
 
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    if let destination = segue.destination as? RocketDetailsViewController,
+      let selectedRowIndex = tableView.indexPathForSelectedRow?.row
+    {
+      destination.rocketDetailsViewModel = RocketDetailViewModel(rocket: rocketViewModel.rockets.value[selectedRowIndex])
+    }
+  }
+  
 }
 
