@@ -47,7 +47,7 @@ class RocketDetailsViewController : UIViewController{
         imageView.layer.cornerRadius = 20
         imageView.addConstraint(NSLayoutConstraint(item: imageView, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .height, multiplier: 1, constant: 200))
         photosStackView.addArrangedSubview(imageView)
-        imageView.sd_setImage(with: URL(string: imageURLString)) { image, error, cacheType, url in
+        imageView.sd_setImage(with: URL(string: imageURLString), placeholderImage: UIImage(named: "rocketError")) { image, error, cacheType, url in
           imageView.superview?.setNeedsLayout()
           
         }
