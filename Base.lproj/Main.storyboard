@@ -225,14 +225,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="i5g-cq-PdJ">
-                                <rect key="frame" x="118.66666666666667" y="361" width="155.66666666666663" height="251.33333333333337"/>
+                                <rect key="frame" x="118.66666666666667" y="360" width="155.66666666666663" height="253"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rocket Idle" translatesAutoresizingMaskIntoConstraints="NO" id="W2Q-1a-dfR">
                                         <rect key="frame" x="17.333333333333336" y="0.0" width="121.33333333333331" height="202.66666666666666"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Move your phone up  to launch the rocket" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o66-2d-ZJS">
-                                        <rect key="frame" x="0.0" y="210.66666666666663" width="155.66666666666666" height="40.666666666666657"/>
-                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                        <rect key="frame" x="0.0" y="210.66666666666663" width="155.66666666666666" height="42.333333333333343"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
