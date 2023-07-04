@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import SDWebImage
 
 class RocketDetailsViewController : UIViewController{
   
@@ -21,6 +22,7 @@ class RocketDetailsViewController : UIViewController{
   @IBOutlet weak var firstStageView: RocketStageView!
   @IBOutlet weak var secondStageView: RocketStageView!
   
+  @IBOutlet weak var photosStackView: UIStackView!
   override func viewDidLoad() {
     super.viewDidLoad()
     
@@ -35,6 +37,20 @@ class RocketDetailsViewController : UIViewController{
     firstStageView.setViewModel(viewModel: rocketDetailsViewModel.firstStage)
     secondStageView.setViewModel(viewModel: rocketDetailsViewModel.secondStage)
 
-    
+    photosStackView.translatesAutoresizingMaskIntoConstraints = false
+    rocketDetailsViewModel.imageURLs
+      .forEach { imageURLString in
+        // TODO: possibly could be a custom class
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 200, height: 200))
+        imageView.contentMode = .scaleAspectFill
+        imageView.clipsToBounds = true
+        imageView.layer.cornerRadius = 20
+        imageView.addConstraint(NSLayoutConstraint(item: imageView, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .height, multiplier: 1, constant: 200))
+        photosStackView.addArrangedSubview(imageView)
+        imageView.sd_setImage(with: URL(string: imageURLString)) { image, error, cacheType, url in
+          imageView.superview?.setNeedsLayout()
+          
+        }
+      }
   }
 }
